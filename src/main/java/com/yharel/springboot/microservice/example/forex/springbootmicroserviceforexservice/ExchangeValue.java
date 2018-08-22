@@ -29,6 +29,8 @@ public class ExchangeValue {
         this.conversionMultiple = conversionMultiple;
     }
 
+    public Long getId() { return id; }
+
     public String getFrom() {
         return from;
     }
