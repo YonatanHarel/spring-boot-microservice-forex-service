@@ -16,7 +16,7 @@ public class ForexController {
     private ExchangeValueRepository repositiory;
 
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
-    public ExchangeValue retrieveExchangevalue(@PathVariable String from, @PathVariable String to) {
+    public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {
         ExchangeValue exchangeValue = repositiory.findByFromAndTo(from, to);
 
         exchangeValue.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
